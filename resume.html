@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张海涛 - 前端技术开发简历</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .resume {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .header h1 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .header .personal-photos{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #3498db;
+        }
+        .personal-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #2c3e50;
+        }
+        .section-title::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 25px;
+            background-color: #3498db;
+            border-radius: 2px;
+        }
+        .objective {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 3px solid #3498db;
+            border-radius: 0 4px 4px 0;
+        }
+        .skills-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+        }
+        .skills-list li {
+            position: relative;
+            padding-left: 25px;
+            font-size: 14px;
+        }
+        .skills-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+        .work-experience, .project-experience {
+            list-style: none;
+        }
+        .work-item, .project-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #eee;
+        }
+        .work-item:last-child, .project-item:last-child {
+            border-bottom: none;
+        }
+        .work-info, .project-info {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .project-desc {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .tech-points {
+            list-style: none;
+            padding-left: 15px;
+        }
+        .tech-points li {
+            position: relative;
+            margin-bottom: 5px;
+        }
+        .tech-points li::before {
+            content: "—";
+            position: absolute;
+            left: -15px;
+            color: #3498db;
+        }
+        .education, .self-evaluation, .hobbies {
+            list-style: none;
+        }
+        .education li, .self-evaluation li, .hobbies li {
+            margin-bottom: 10px;
+        }
+        .certificates {
+            list-style: none;
+        }
+        .certificates li {
+            margin-bottom: 5px;
+        }
+        .open-source-project {
+            list-style: none;
+        }
+        .open-source-project li {
+            margin-bottom: 5px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .resume {
+                padding: 20px;
+            }
+            .personal-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .skills-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <div class="header">
+          <img class="personal-photos" src="./img/personal_photos.jpg" alt="个人照片">
+            <h1>张海涛</h1>
+            <div class="personal-info">
+                <div>性别：男</div>
+                <div>工作经验：6年</div>
+                <div>政治面貌：中共党员</div>
+                <div>联系方式：18883723954</div>
+                <div>邮箱：1729058584@qq.com</div>
+            </div>
+        </div>
+        
+        <section class="section">
+            <h2 class="section-title">求职意向</h2>
+            <div class="objective">
+                <p>目标职能：高级前端开发技术工程师</p>
+                <p>工作性质：全职</p>
+                <p>期望薪资：面议</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">个人技能描述</h2>
+            <ul class="skills-list">
+                <li>熟练使用 react+ts+antd实现单页面应用</li>
+                <li>熟练使用 redux 来集中管理组件的状态数据</li>
+                <li>熟练使用react-router-dom 实现单页面应用的路由</li>
+                <li>掌握原型，闭包，熟悉 js 面向对象的思想</li>
+                <li>掌握Es6,E67 新特性，如：箭头函数，Promise</li>
+                <li>掌握Session, Cookie ,localStorage存储</li>
+                <li>熟练设计MVVM模块</li>
+                <li>熟练使用 less,sass,stylus 预处理器</li>
+                <li>熟练使用微信开发者工具、支付宝开发者工具开发小程序</li>
+                <li>擅于设计hooks,封装组件</li>
+                <li>熟悉 Mysql,SQLserve,mongodb 数据库</li>
+                <li>熟悉微前端框架，例如: qiankun</li>
+                <li>熟悉 Node.js,配置过Nginx</li>
+                <li>熟练使用charles,lightproxy,xswitch等代理抓包工具</li>
+                <li>熟悉uniapp开发</li>
+                <li>熟练使用webpack 及其优化</li>
+                <li>熟悉diff及fiber算法</li>
+                <li>熟练使用跨域网页通信和跨域请求数据</li>
+                <li>对http网络通信原理有一定理解</li>
+                <li>熟练使用vue2.0,vue3.0</li>
+                <li>熟练使用electron桌面应用开发</li>
+                <li>利用大模型搭建本地知识库</li>
+            </ul>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">工作经历</h2>
+            <ul class="work-experience">
+                <li class="work-item">
+                    <div class="work-info">2023/3-至今 | 杭州富航百悦电子商务有限公司 | 前端负责人</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-info">2020/8-2023/3 | 浙江卓有科技有限公司 | 高级前端开发工程师</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-info">2019/2-2020/7 | 杭州博彦信息技术有限公司 | 前端开发工程师</div>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">项目经验</h2>
+            <ul class="project-experience">
+                <li class="project-item">
+                    <div class="work-info">桌面应用直播</div>
+                    <div class="project-desc">项目描述：线上直播、连麦、带货、送礼物、共享桌面、添加素材</div>
+                    <ul class="tech-points">
+                        <li>熟悉需求，搭建项目</li>
+                        <li>梳理模块，集成第三方工具</li>
+                        <li>electron主文件配置，添加预加载文件</li>
+                        <li>主进程与渲染进程通信</li>
+                        <li>获取本地设备，本地混流，多个用户流布局</li>
+                        <li>与安卓端，ios端联调</li>
+                        <li>搭建文生文工作流知识库</li>
+                    </ul>
+                </li>
+                
+                <li class="project-item">
+                    <div class="work-info">合同中心</div>
+                    <div class="project-desc">项目描述：走项目流程，合同基本信息，项目关联信息，添加商品，附件文件，金额计算</div>
+                    <ul class="tech-points">
+                        <li>配置ts，利用ts+hooks开发</li>
+                        <li>引入yapi，locatorJs，mockjs</li>
+                        <li>组件的封装、打包</li>
+                        <li>本地存储，缓存</li>
+                        <li>模块MVVM设计</li>
+                        <li>原生js处理节点</li>
+                        <li>表单处理</li>
+                        <li>webpack配置</li>
+                    </ul>
+                </li>
+                
+                <li class="project-item">
+                    <div class="work-info">订单下单页</div>
+                    <div class="project-desc">项目描述：商品下单，订单信息，客户信息，获取地址，类目选择，信息提示</div>
+                    <ul class="tech-points">
+                        <li>技术栈vue3.0+uniapp</li>
+                        <li>监听数据变化，组装数据</li>
+                        <li>组件通信</li>
+                        <li>计算属性</li>
+                        <li>引入第三方工具</li>
+                        <li>低代码平台配置，引入低代码库</li>
+                    </ul>
+                </li>
+                
+                <li class="project-item">
+                    <div class="work-info">钉钉智能客服</div>
+                    <div class="project-desc">项目描述：该项目使用react开发，利用umi加qiankun搭建项目，主要用于客服对于用户的问题解答平台</div>
+                    <ul class="tech-points">
+                        <li>封装业务组件</li>
+                        <li>编写开发环境文档</li>
+                        <li>路由组件的监听与通信</li>
+                        <li>接口请求封装</li>
+                        <li>考拉开通智能客服的开通链路开发</li>
+                    </ul>
+                </li>
+                
+                <li class="project-item">
+                    <div class="work-info">数字内容平台(react pc端）</div>
+                    <div class="project-desc">项目描述：该项目主要使用react框架开发，为客户提供一个主播平台，旨在为客户提供一个视觉感好，操作方便，易于管理自己专辑，收益的平台。</div>
+                    <ul class="tech-points">
+                        <li>通过引入外部组件实现客户需求 如 fullCalendar,Bizcharts</li>
+                        <li>使用 阿里内部fusion库及antd组件库 快速搭建页面所需组件</li>
+                        <li>通过支付宝扫码授权进入另一个平台去认证后更新cookie,返回原来平台</li>
+                        <li>通过阿里云图片水印去合成图片上传到云端及通过canvas把不同源的图片及html合成上传到另一个服务器上</li>
+                        <li>通过设置window.localstorage存储模式，在对应的模块取出并实现对应模式的页面</li>
+                        <li>通过react.lazy import组件，去实现懒加载组件，从而减轻浏览器压力，快速加载，使得用户有极致的体验</li>
+                        <li>upload上传文件，beforeUpload前限制上传文件格式，控制文件的大小，通过axios将上传的文件去放到服务端，服务端返回一个地址，设置到upload上</li>
+                    </ul>
+                </li>
+                
+                <li class="project-item">
+                    <div class="work-info">天猫精灵音箱</div>
+                    <div class="project-desc">项目描述：实现8，10寸屏的智能设备展示与绑定</div>
+                    <ul class="tech-points">
+                        <li>通过对css熟练的使用，多种方法去模拟测试天猫精灵音箱上是否支持</li>
+                        <li>获取屏幕高度clientHeight，获取文档的高度scrollHeight，判断事件距离屏幕高度event.clientY，减去offsetTop，得到滚动条位置(getBoundingClientRect.top)</li>
+                        <li>使用 my.navigateBack 及 my.navigateTo 实现路由组件跳转</li>
+                        <li>使用my.ix.facelogin 扫脸登录认证</li>
+                        <li>使用 my.getAuthCode 获取授权码</li>
+                        <li>使用两大括号{{}}进行数据绑定</li>
+                        <li>使用a:for 进行列表渲染</li>
+                        <li>通过mtop接口获取指令，并展示于音箱页面效果</li>
+                        <li>使用template模板封装代码，多处使用</li>
+                    </ul>
+                </li>
+                
+                <li class="project-item">
+                    <div class="work-info">后台管理系统(react pc 端)</div>
+                    <div class="project-desc">项目描述: 该项目主要使用react 框架开发，为一个后台管理系统，旨在为管理员更方便的管理个人数据信息：本人负责项目的迭代和功能的维护</div>
+                    <ul class="tech-points">
+                        <li>使用react-router 实现单页面路由跳转</li>
+                        <li>熟练使用antd组件实现项目交互功能组件</li>
+                        <li>使用 redux 实现组件之间通信集中管理数据</li>
+                        <li>使用 localstorage 存储 token,实现自动登录</li>
+                        <li>重写upload组件实现图片的上传</li>
+                        <li>引入 ECharts 构建图表</li>
+                        <li>使用 import 实现路由组件懒加载</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">教育背景</h2>
+            <ul class="education">
+                <li>2016-09 ~ 2019-07 | 重庆电子科技职业大学 | 软件技术（大专）</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">开源项目</h2>
+            <ul class="open-source-project">
+                <li>前端基础知识整理：<a href="https://github.com/Z1729058584/Frontend-basic-exercise" target="_blank"  rel="noopener noreferrer">https://github.com/Z1729058584/Frontend-basic-exercise</a></li>
+                <li>自动化获取微信聊天记录应用：<a href="https://api.winrobot360.com/redirect/robot/share?inviteKey=b9deb774bd6219f8" target="_blank" rel="noopener noreferrer">https://api.winrobot360.com/redirect/robot/share?inviteKey=b9deb774bd6219f8</a></li>
+                <li>乐高编程积木自定义搭建：<a href="https://gitee.com/zhang_______haitao/legao" target="_blank" rel="noopener noreferrer">https://gitee.com/zhang_______haitao/legao</a></li>
+            </ul>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">自我评价</h2>
+            <ul class="self-evaluation">
+                <li>热爱编程，勇于挑战自己不擅长的领域，具有极客精神</li>
+                <li>性格乐观，热爱生活，喜欢有挑战的东西</li>
+            </ul>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">兴趣爱好</h2>
+            <ul class="hobbies">
+                <li>喜欢在掘金，CSDN，github上看一些前端前沿的知识点及文章</li>
+                <li>喜欢健身，唱歌</li>
+            </ul>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">证书</h2>
+            <ul class="certificates">
+                <li>高级计算机证书</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
+
+<script>
+    // 滚动时触发工作/项目经历项的动画
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateX(0)';
+            }
+        });
+    }, { rootMargin: '0px 0px -100px 0px' }); // 元素进入视口100px时触发
+
+    // 初始化工作/项目经历项的初始状态
+    document.querySelectorAll('.work-item, .project-item').forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateX(-20px)';
+        item.style.transition = 'all 0.6s ease-out';
+        observer.observe(item);
+    });
+</script>
+
+<style>
+    /* ... 原有样式保持不变 ... */
+
+    /* 新增闪电动画关键帧 */
+    @keyframes lightningFlash {
+        0% { opacity: 0.4; transform: scale(0.9); }
+        50% { opacity: 1; transform: scale(1.2); }
+        100% { opacity: 0.4; transform: scale(0.9); }
+    }
+
+    /* 技能列表项样式调整 */
+    .skills-list li {
+        position: relative;
+        padding-left: 25px; /* 保持原有左侧间距 */
+        font-size: 14px;
+        opacity: 0;
+        animation: fadeInList 0.4s ease-out forwards;
+    }
+    .skills-list li::before {
+        content: "⚡"; /* 替换原点为闪电图标 */
+        position: absolute;
+        left: 0;
+        color: #3498db; /* 保持原有主题色 */
+        font-weight: bold;
+        animation: lightningFlash 1s ease-in-out infinite; /* 1秒循环一次的闪电动画 */
+    }
+
+    .open-source-project li{
+        /* font-size: 14px; */
+        font-weight: bold;
+        opacity: 0;
+        animation: fadeInList 0.4s ease-out forwards;
+         position: relative;
+        padding-left: 25px; /* 保持原有左侧间距 */
+    }
+
+    .open-source-project li::before {
+        content: "⚡"; /* 替换原点为闪电图标 */
+        position: absolute;
+        left: 0;
+        color: #3498db; /* 保持原有主题色 */
+        font-weight: bold;
+        animation: lightningFlash 1s ease-in-out infinite; /* 1秒循环一次的闪电动画 */
+    }
+
+
+    /* 保持原有技能项淡入延迟 */
+    .skills-list li:nth-child(1) { animation-delay: 0.3s; }
+    .skills-list li:nth-child(2) { animation-delay: 0.4s; }
+    .skills-list li:nth-child(3) { animation-delay: 0.5s; }
+    .skills-list li:nth-child(4) { animation-delay: 0.6s; }
+    .skills-list li:nth-child(5) { animation-delay: 0.7s; }
+    /* 可根据实际技能项数量继续扩展延迟 */
+</style>
+
+<style>
+    /* ... 原有样式保持不变 ... */
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideInLeft {
+        from { opacity: 0; transform: translateX(-20px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes slideInRight {
+        from { opacity: 0; transform: translateX(20px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeInList {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes personalPhoto {
+        0% {  transform: rotate(0deg); }
+        50% {  transform: rotate(180deg); }
+        100% {  transform: rotate(360deg); }
+    }
+
+    /* 个人照片动画 */
+    .personal-photos:hover{
+      animation: personalPhoto 2s; /* 页面加载时从下往上淡入 */
+    }
+
+    /* 整体简历容器动画 */
+    .resume {
+        animation: fadeInUp 0.8s ease-out forwards; /* 页面加载时从下往上淡入 */
+    }
+
+    /* 标题动画（逐个左侧滑入） */
+    .section-title {
+        opacity: 0;
+        animation: slideInLeft 0.6s ease-out forwards;
+    }
+    /* 为不同位置的标题设置延迟，形成逐个出现效果 */
+    .section:nth-child(2) .section-title { animation-delay: 0.2s; }
+    .section:nth-child(3) .section-title { animation-delay: 0.3s; }
+    .section:nth-child(4) .section-title { animation-delay: 0.4s; }
+    .section:nth-child(5) .section-title { animation-delay: 0.5s; }
+    .section:nth-child(6) .section-title { animation-delay: 0.6s; }
+    .section:nth-child(7) .section-title { animation-delay: 0.7s; }
+    .section:nth-child(8) .section-title { animation-delay: 0.8s; }
+
+    /* 个人信息项动画（左右交替滑入） */
+    .personal-info > div {
+        opacity: 0;
+        animation: slideInRight 0.5s ease-out forwards;
+    }
+    .personal-info > div:nth-child(odd) { animation-name: slideInLeft; } /* 奇数项左侧滑入 */
+    .personal-info > div:nth-child(1) { animation-delay: 0.2s; }
+    .personal-info > div:nth-child(2) { animation-delay: 0.3s; }
+    .personal-info > div:nth-child(3) { animation-delay: 0.4s; }
+    .personal-info > div:nth-child(4) { animation-delay: 0.5s; }
+    .personal-info > div:nth-child(5) { animation-delay: 0.6s; }
+
+    /* 技能列表项逐个淡入 */
+    .skills-list li {
+        opacity: 0;
+        animation: fadeInList 0.4s ease-out forwards;
+    }
+    .skills-list li:nth-child(1) { animation-delay: 0.3s; }
+    .skills-list li:nth-child(2) { animation-delay: 0.4s; }
+    .skills-list li:nth-child(3) { animation-delay: 0.5s; }
+    .skills-list li:nth-child(4) { animation-delay: 0.6s; }
+    .skills-list li:nth-child(5) { animation-delay: 0.7s; }
+    /* 可根据实际技能项数量继续扩展延迟 */
+</style>
