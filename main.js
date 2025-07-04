@@ -13,9 +13,9 @@ const server = http.createServer((req, res) => {
   // res.setHeader('Content-Type', 'text/html');
   // 根据请求路径确定文件路径和内容类型
   let filePath, contentType;
-  if (req.url === '/' || req.url === '/resume.html') {
+  if (req.url === '/' || req.url === '/index.html') {
     // 处理HTML请求
-    filePath = './resume.html';
+    filePath = './index.html';
     contentType = 'text/html';
   } else if (req.url.startsWith('/img/')) {
     // 处理图片请求（假设图片存放在项目根目录的img文件夹下）
